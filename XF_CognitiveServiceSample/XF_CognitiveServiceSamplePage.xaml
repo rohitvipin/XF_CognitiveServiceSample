@@ -3,13 +3,15 @@
 	<ContentPage.Padding>
 		<OnPlatform x:TypeArguments="Thickness" iOS="0, 20, 0, 0" Android="0, 0, 0, 0" WinPhone="0, 0, 0, 0" />
 	</ContentPage.Padding>
-	<StackLayout VerticalOptions="FillAndExpand" Spacing="10" Padding="10">
-		<Label x:Name="titleLabel" HorizontalOptions="FillAndExpand" VerticalOptions="Start" FontSize="Large" />
-		<Image x:Name="selectedImage" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" HeightRequest="500" />
-		<Label x:Name="descLabel" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" FontSize="Medium" />
-		<StackLayout VerticalOptions="End" Spacing="10" Padding="10" Orientation="Horizontal">
-			<Button Text="Take Photo" VerticalOptions="Center" HorizontalOptions="FillAndExpand" Clicked="ClickPhotoButton_Clicked" BackgroundColor="Blue" TextColor="White" />
-			<Button Text="Pick Photo" VerticalOptions="Center" HorizontalOptions="FillAndExpand" Clicked="PickPhotoButton_Clicked" BackgroundColor="Blue" TextColor="White" />
+	<ScrollView VerticalOptions="FillAndExpand">
+		<StackLayout VerticalOptions="FillAndExpand" Spacing="10" Padding="10">
+			<Label x:Name="titleLabel" HorizontalOptions="FillAndExpand" VerticalOptions="Start" FontSize="Large" />
+			<Image x:Name="selectedImage" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" HeightRequest="400" />
+			<Label x:Name="descLabel" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" FontSize="Medium" />
+			<StackLayout VerticalOptions="End" Spacing="10" Padding="10" Orientation="Horizontal">
+				<Button Text="Take Photo" VerticalOptions="Center" HorizontalOptions="FillAndExpand" Clicked="ClickPhotoButton_Clicked" BackgroundColor="Blue" TextColor="White" />
+				<Button Text="Pick Photo" VerticalOptions="Center" HorizontalOptions="FillAndExpand" Clicked="PickPhotoButton_Clicked" BackgroundColor="Blue" TextColor="White" />
+			</StackLayout>
 		</StackLayout>
-	</StackLayout>
+	</ScrollView>
 </ContentPage>
