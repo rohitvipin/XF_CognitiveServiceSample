@@ -4,6 +4,8 @@ using Android.Content.PM;
 using Android.OS;
 using Acr.UserDialogs;
 using Xamarin.Forms.Platform.Android;
+using Android.Views;
+using Android.Graphics;
 
 namespace XF_CognitiveServiceSample.Droid
 {
@@ -15,6 +17,10 @@ namespace XF_CognitiveServiceSample.Droid
             base.OnCreate(savedInstanceState);
 
             Xamarin.Forms.Forms.Init(this, savedInstanceState);
+
+            ActionBar.SetIcon(Color.Transparent);
+            Window.AddFlags(WindowManagerFlags.DrawsSystemBarBackgrounds);
+
 
             UserDialogs.Init(this);
 
