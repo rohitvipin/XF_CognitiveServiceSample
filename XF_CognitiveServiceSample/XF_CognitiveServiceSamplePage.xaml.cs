@@ -24,6 +24,11 @@ namespace XF_CognitiveServiceSample
         {
             try
             {
+                if (image == null)
+                {
+                    return;
+                }
+
                 IsBusy = true;
 
                 _dialogService.ShowLoading("Analysing Image...");

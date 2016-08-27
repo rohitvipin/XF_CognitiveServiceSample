@@ -10,7 +10,7 @@ namespace XF_CognitiveServiceSample.Services
 
         public async Task<MediaFile> TakePhotoAsync()
         {
-            if (CrossMedia.Current.IsCameraAvailable && CrossMedia.Current.IsTakePhotoSupported)
+            if (_currentInstance.IsCameraAvailable && _currentInstance.IsTakePhotoSupported)
             {
                 // Supply media options for saving our photo after it's taken.
                 var mediaOptions = new StoreCameraMediaOptions
@@ -30,7 +30,7 @@ namespace XF_CognitiveServiceSample.Services
         public async Task<MediaFile> PickPhotoAsync()
         {
             // Select a photo. 
-            if (CrossMedia.Current.IsPickPhotoSupported)
+            if (_currentInstance.IsPickPhotoSupported)
             {
                 return await CrossMedia.Current.PickPhotoAsync();
             }
